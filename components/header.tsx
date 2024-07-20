@@ -1,10 +1,13 @@
+import { SignedIn, SignedOut, UserButton, SignInButton } from "@clerk/nextjs";
 import { Briefcase, HomeIcon, Link, MessagesSquare, SearchIcon, UsersIcon } from "lucide-react";
 import Image from "next/image";
 import Input from "postcss/lib/input";
+import { Button } from "./ui/button";
 
 
 function Header() {
-    return <div
+    return (
+         <div
         className="flex items-center p-2 max-w-6xl mx-auto">
         <Image
             className="rounded-lg"
@@ -45,12 +48,21 @@ function Header() {
             <MessagesSquare className="h-5" />
             <p>Jobs</p>
             </Link>
+            {/* user Button if signed in */}
+            <SignedIn>
+                <UserButton/>
+            </SignedIn>
+
             
+            {/* user Button if signed out */}
+            <SignedOut>
+                <Button asChild variant = "secondary">
+                    <SignInButton/>
+                </Button>
+            </SignedOut>  
         </div>
-
-      function calculate
     </div>
-
+); 
 
 }
 
