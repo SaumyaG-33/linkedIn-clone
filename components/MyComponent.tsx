@@ -30,9 +30,9 @@ const MyComponent: React.FC = async () => {
         alt='LinkedIn Premium' 
         className='mx-auto' 
       /> 
-       */}
-      <p className='text-sm pt-4 text-center text-gray-500'>
-        See who's viewed your profile in the last 90 days
+      */}
+      <p className="text-sm pt-4 text-center text-gray-500">
+        See who has viewed your profile in the last 90 days
 </p>
 
 <div className='flex justify-center mt-4'>
