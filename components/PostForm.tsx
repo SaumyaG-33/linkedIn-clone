@@ -6,14 +6,15 @@ import { ImageIcon, XIcon } from "lucide-react";
 import { Butcherman } from "next/font/google";
 import { Button } from "./ui/button";
 import { useRef, useState } from "react";
-import createPostAction from "@/actions/createPostAction";
+import createPostAction from "actions/createPostAction";
+import { toast } from "sonner";
+//import createPostAction from "@/actions/createPostAction";
 
 function PostForm() {
     const { user } = useUser();
     const ref = useRef<HTMLFormElement>(null);
     const fileInputRef = useRef<HTMLInputElement>(null);
     const [preview, setPreview] = useState<string | null>(null);
-
     const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const file = event.target.files?.[0];
         if (file) {
@@ -32,10 +33,8 @@ function PostForm() {
         try {
             await createPostAction(formDataCopy);
         } catch (error) {
-            console.log("error creating yoru post: ", error);
-            
+            console.log("error creating your post: ", error);   
         }
-    
         const image = formDataCopy.get("image") as File;
 
     }
@@ -48,7 +47,14 @@ function PostForm() {
         <div className="mb-2">
             <form ref={ref} action={formdata => {
                 //handle form submssion with server actions 
-                handlePostAction(formdata);
+               const promise = handlePostAction(formdata);
+               toast.promise(promise, {
+                loading: "Creating your post...",
+                success: "Post created",
+                error: "Error creating your post",
+                
+               });
+
 
                 //toast notification based on the promise above
             }} className="p-3 bg-white rounded-lg border">
@@ -88,7 +94,8 @@ function PostForm() {
                 )}
 
                 <div className="flex justify-end mt-2 space-x-2">
-                    <Button type="button" onClick={()=> fileInputRef.current?.click()}>
+                    <Button type="button" variant="outline"
+                    onClick={()=> fileInputRef.current?.click()}>
                         <ImageIcon className="mr-2" size={16} color="currentColor" />
                         {preview ? "Change" : "Add"} an image
                     </Button>
@@ -97,7 +104,6 @@ function PostForm() {
                     {preview && (
                         <Button variant={"outline"} type = "button" onClick={() => setPreview(null)}>
                         <XIcon className="mr-2" size={16} color="currentColor" />
-                           
                             Remove image
                         </Button>
                     )}

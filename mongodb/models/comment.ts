@@ -1,5 +1,6 @@
-import { IUser } from "@/types/user";
-import mongoose, {Schema, Document, models, Model} from "mongoose";
+
+import mongoose, {Schema, Document, models} from "mongoose";
+import { IUser } from "types/user";
 
 
 //client 
@@ -24,10 +25,14 @@ const commentSchema = new Schema<IComment>(
     },
 
     text: { type: String, required: true },
+    created:{ type: Date, default: Date.now }, 
+    updated: { type: Date, default: Date.now }
+
 
     }
 
 );
 
 
-export const Comment = models.Comment || mongoose.models.Comment || mongoose.model<IComment>("Comment", commentSchema);
+export const Comment = 
+models.Comment || mongoose.model<IComment>("Comment", commentSchema);

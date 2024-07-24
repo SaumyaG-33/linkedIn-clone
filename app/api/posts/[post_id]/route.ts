@@ -1,8 +1,9 @@
-import connectDB from "@/mongodb/db";
-import { Post } from "@/mongodb/models/post";
+
 import { auth, currentUser } from "@clerk/nextjs/server";
 import { error } from "console";
 import { cp, stat } from "fs";
+import connectDB from "mongodb/db";
+import { Post } from "mongodb/models/post";
 import { deleteAppClientCache } from "next/dist/server/lib/render-server";
 import { NextResponse } from "next/server";
 

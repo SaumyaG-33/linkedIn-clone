@@ -1,9 +1,10 @@
-import connectDB from "@/mongodb/db";
-import { IPost, IPostBase, Post } from "@/mongodb/models/post";
-import {IUser} from "@/types/user";
+
 import { auth } from "@clerk/nextjs/server";
 import { stat } from "fs";
+import connectDB from "mongodb/db";
+import { IPostBase, Post } from "mongodb/models/post";
 import { NextRequest, NextResponse } from "next/server";
+import { IUser } from "types/user";
 
 
 //typedef in the API level;

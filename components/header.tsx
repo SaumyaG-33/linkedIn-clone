@@ -1,8 +1,9 @@
 import { SignedIn, SignedOut, UserButton, SignInButton } from "@clerk/nextjs";
-import { Briefcase, HomeIcon, Link, MessagesSquare, SearchIcon, UsersIcon } from "lucide-react";
 import Image from "next/image";
 import Input from "postcss/lib/input";
 import { Button } from "./ui/button";
+import { Briefcase, HomeIcon, MessagesSquare, SearchIcon, UsersIcon } from "lucide-react";
+import Link from "next/link";
 
 
 function Header() {
@@ -28,25 +29,26 @@ function Header() {
             </form>
         </div>
 
+
         <div className="flex items-center space-x-4 px-6">
-            <Link href="" className="icon">
+            <Link href="/" className="icon">
             <HomeIcon className="h-5 " />
             <span>Home</span>
             </Link>
 
-            <Link href="" className="icon hidden md:flex">
+            <Link href="/" className="icon hidden md:flex">
             <UsersIcon className="h-5 " />
             <p>Network</p>
             </Link>
     
-            <Link href="" className="icon hidden md:flex">
+            <Link href="/" className="icon hidden md:flex">
             <Briefcase className="h-5" />
             <p>Jobs</p>
             </Link>
 
-            <Link href="" className="icon">
+            <Link href="/" className="icon">
             <MessagesSquare className="h-5" />
-            <p>Jobs</p>
+            <p>Messages</p>
             </Link>
             {/* user Button if signed in */}
             <SignedIn>
@@ -61,6 +63,8 @@ function Header() {
                 </Button>
             </SignedOut>  
         </div>
+
+        
     </div>
 ); 
 
