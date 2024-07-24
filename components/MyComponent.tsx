@@ -23,17 +23,18 @@ const MyComponent: React.FC = async () => {
         </SignedOut>
           
 </p>
-      {/*
+{/* Additional content can go here
       <img 
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6cZygL_XjpSMJp4UO_mEYnDXTGw4drx-nhA&s"
         height={100} width={100}
         alt='LinkedIn Premium' 
         className='mx-auto' 
-      />
-      */}
+      /> 
+       */}
       <p className='text-sm pt-4 text-center text-gray-500'>
         See who's viewed your profile in the last 90 days
 </p>
+
 <div className='flex justify-center mt-4'>
         <a 
           href="https://www.linkedin.com/premium" 
