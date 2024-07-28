@@ -13,7 +13,7 @@ function CommentFeed ({ post }: { post: IPostDocument}) {
     <div className="space-y-2 mt-3">
         {post.comments?.map((comment) => 
         (
-            <div key={comment._id} className="flex space-x-1">
+            <div key={String(comment._id)} className="flex space-x-1">
                 <Avatar className="w-8 h-8">
                     <AvatarImage src={comment.user.userImage} />
                     <AvatarFallback>

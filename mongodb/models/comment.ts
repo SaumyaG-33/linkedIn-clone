@@ -11,6 +11,7 @@ export interface ICommentBase{
 
 //backend 
 export interface IComment extends ICommentBase, Document {
+    
     created: Date;
     updated: Date;
 }
