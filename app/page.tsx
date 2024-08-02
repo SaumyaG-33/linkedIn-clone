@@ -6,7 +6,7 @@ import UserInformation from "components/UserInformation";
 import { connect } from "http2";
 import connectDB from "mongodb/db";
 import { Post } from "mongodb/models/post";
-import Image from "next/image";
+
 
 export const revalidate = 0; 
 
@@ -34,7 +34,7 @@ export default async function Home() {
 
 
   <section className="hidden xl:inline justify-center col-span-2">
-    <MyComponent />
+    {/* <MyComponent /> */}
 
   </section>
 
