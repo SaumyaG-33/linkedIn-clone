@@ -24,8 +24,7 @@ export default async function Home() {
 
   <section className="col-span-full md:col-span-6 xl:col-span-4 
   xl:max-w-xl mx-auto w-full">
-   <SignedIn>
-    <PostForm/>
+   <SignedIn> <PostForm/>
    </SignedIn>
   <PostFeed 
   posts={posts}/>
@@ -34,7 +33,7 @@ export default async function Home() {
 
 
   <section className="hidden xl:inline justify-center col-span-2">
-    {/* <MyComponent /> */}
+    <MyComponent />
 
   </section>
 
