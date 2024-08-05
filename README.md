@@ -37,7 +37,7 @@ The application is deployed on Vercel. For backend services, Microsoft Azure is 
 
 For any questions or further information, feel free to reach out:
 
-- **GitHub**: [Saumya-33](https://github.com/Saumya-33)
+- **GitHub**: [SaumyaG-33](https://github.com/SaumyaG-33)
 - **Email**: [suamyag335@gmail.com](mailto:suamyag335@gmail.com)
 
 Thank you for checking out the LinkedIn Clone! Enjoy exploring and contributing to this project.
