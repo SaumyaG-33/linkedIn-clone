@@ -15,9 +15,9 @@ export default async function createPostAction(formData: FormData): Promise<void
   if (!user) {
     throw new Error("You must be signed in to create a post")
   }
-  const postInput   = formData.get("postInput") as string;
+  const postInput = formData.get("postInput") as string;
   const image = formData.get("image") as File;
-  let image_url:string | undefined = undefined;
+  let image_url: string | undefined = undefined;
 
   if (!postInput) {
     throw new Error("Post cannot be empty")
