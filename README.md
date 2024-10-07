@@ -1,4 +1,4 @@
-LinkedIn Clone
+
 Welcome to the LinkedIn Clone project! This application replicates core features of LinkedIn, allowing users to interact with posts, sign in securely, and benefit from real-time updates. It has been built using Next.js, TypeScript, Tailwind CSS, and various other technologies to ensure a seamless and responsive user experience.
 
 Local Setup
