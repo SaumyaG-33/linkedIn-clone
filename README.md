@@ -1,16 +1,41 @@
-Certainly! Here’s the updated README file without the localhost setup instructions:
-
----
-
-# LinkedIn Clone
-
+LinkedIn Clone
 Welcome to the LinkedIn Clone project! This application replicates core features of LinkedIn, allowing users to interact with posts, sign in securely, and benefit from real-time updates. It has been built using Next.js, TypeScript, Tailwind CSS, and various other technologies to ensure a seamless and responsive user experience.
 
-## Live Demo
+Local Setup
+To run the project on your local machine, follow these steps:
 
-You can explore the deployed application at the following link:
+Prerequisites
+Node.js: Ensure that you have Node.js installed. You can download it from Node.js.
+Git: Make sure Git is installed to clone the repository. Get it from Git.
+Installation
+Clone the Repository:
 
-[LinkedIn Clone - Live Demo](https://linkdin-clone-2-ochre.vercel.app/)
+bash
+Copy code
+git clone https://github.com/SaumyaG-33/linkedin-clone.git
+cd linkedin-clone
+Install Dependencies:
+Run the following command to install the required dependencies:
+
+bash
+Copy code
+npm install
+Environment Variables:
+Create a .env.local file in the root of the project and add the necessary environment variables (e.g., for Clerk authentication, Cosmo DB connection). For example:
+
+makefile
+Copy code
+NEXT_PUBLIC_CLERK_FRONTEND_API=<your-clerk-frontend-api>
+CLERK_API_KEY=<your-clerk-api-key>
+AZURE_COSMOS_CONNECTION_STRING=<your-cosmo-db-connection-string>
+Run the Development Server:
+Start the local server using the following command:
+
+bash
+Copy code
+npm run dev
+The application will be available at http://localhost:3000.
+
 
 ## Features
 
